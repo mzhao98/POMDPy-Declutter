@@ -42,10 +42,13 @@ class DiscreteActionMapping(ActionMapping):
         return action_map_copy
 
     def get_action_node(self, action):
-        return self.entries.get(action.bin_number).child_node
+        # print("action = ", action)
+        return self.entries.get(action).child_node
+        # return self.entries.get(action.bin_number).child_node
 
     def create_action_node(self, action):
-        entry = self.entries.get(action.bin_number)
+        # entry = self.entries.get(action.bin_number)
+        entry = self.entries.get(action)
         entry.child_node = ActionNode(entry)
         self.number_of_children += 1
         return entry.child_node

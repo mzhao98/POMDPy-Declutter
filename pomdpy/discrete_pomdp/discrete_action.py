@@ -11,7 +11,8 @@ class DiscreteAction(Point):
         return self.bin_number
 
     def __eq__(self, other_discrete_action):
-        return self.bin_number == other_discrete_action.bin_number
+        # return self.bin_number == other_discrete_action.bin_number
+        return self.bin_number == other_discrete_action
 
     @abc.abstractmethod
     def print_action(self):

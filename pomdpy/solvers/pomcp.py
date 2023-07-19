@@ -123,7 +123,8 @@ class POMCP(BeliefTreeSolver):
 
         # delayed_reward is "Q maximal"
         # current_q_value is the Q value of the current belief-action pair
-        action_mapping_entry = belief_node.action_map.get_entry(action.bin_number)
+        # action_mapping_entry = belief_node.action_map.get_entry(action.bin_number)
+        action_mapping_entry = belief_node.action_map.get_entry(action)
 
         q_value = action_mapping_entry.mean_q_value
 
